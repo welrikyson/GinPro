@@ -1,7 +1,6 @@
 package br.com.gincanaid.view.login;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import br.com.gincanaid.app.Login;
@@ -36,19 +35,14 @@ public class LoginController implements Initializable {
 		UsuarioDAO dao = new UsuarioDAO();
 		String login = txtNome.getText();
 		String senha = psSenha.getText();
-		List<Usuario> usuarios =dao.pesquisaPorLogin(login);
+		Usuario usuario =dao.pesquisaPorLogin(login);
 		
-		if(!usuarios.isEmpty()) {
-			for (Usuario usuario : usuarios) {
+		if(usuario.getLogin().equals(login)) {
 				if(usuario.getSenha().equals(senha)) {
 					lbErroLogin.setText("logado!");
-					break;
 				}else {
 					lbErroLogin.setText("Senha incorreta, verifique os valores!");
 				}
-			}
-			
-				
 			
 		}else {
 			lbErroLogin.setText("Usuario nao existe ou inativo!");
