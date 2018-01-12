@@ -1,9 +1,12 @@
 package br.com.gincanaid.view.login;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import br.com.gincanaid.app.Login;
+import br.com.gincanaid.dao.UsuarioDAO;
+import br.com.gincanaid.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,15 +32,24 @@ public class LoginController implements Initializable {
 
 	@FXML
 	void logar(ActionEvent event) {
+		
+		UsuarioDAO dao = new UsuarioDAO();
 		String login = txtNome.getText();
 		String senha = psSenha.getText();
+		List<Usuario> usuarios =dao.pesquisaPorLogin(login);
 		
-		if("welrikyson".equals(login)) {
-			if ("123".equals(senha)) {
-				lbErroLogin.setText("logado!");
-			} else {
-				lbErroLogin.setText("Senha incorreta, verifique os valores!");
+		if(!usuarios.isEmpty()) {
+			for (Usuario usuario : usuarios) {
+				if(usuario.getSenha().equals(senha)) {
+					lbErroLogin.setText("logado!");
+					break;
+				}else {
+					lbErroLogin.setText("Senha incorreta, verifique os valores!");
+				}
 			}
+			
+				
+			
 		}else {
 			lbErroLogin.setText("Usuario nao existe ou inativo!");
 		}

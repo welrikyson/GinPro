@@ -1,5 +1,7 @@
 package br.com.gincanaid.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import br.com.gincanaid.connection.Connection;
@@ -17,6 +19,14 @@ public class UsuarioDAO {
 		Usuario usuario = em.find(Usuario.class, id);
 		em.close();
 		return usuario;
+	}
+	
+	public List<Usuario> pesquisaPorLogin(String login) {
+		em = Connection.emf.createEntityManager();
+		@SuppressWarnings("unchecked")
+		List<Usuario> usarios = em.createNamedQuery("Usuario.login").setParameter("login",login).getResultList();
+		em.close();
+		return usarios;
 	}
 
 }

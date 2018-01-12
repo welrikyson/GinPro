@@ -1,18 +1,20 @@
 package br.com.gincanaid.test;
 
+import java.util.List;
+
 import br.com.gincanaid.dao.UsuarioDAO;
 import br.com.gincanaid.model.Usuario;
 
 public class TesteUsuarioConsultas {
 
 	public static void main(String[] args) {
-		Usuario usuario= null;
+		List<Usuario> usuarios= null;
 		
 		UsuarioDAO dao = new UsuarioDAO();
 		
-		usuario = dao.pesquisaPorId(1);
+		usuarios = dao.pesquisaPorLogin("welrikyson");
 		
-		System.out.println(usuario.getSenha());
+		usuarios.forEach(u -> System.out.println(u.getLogin()));
 		
 
 	}
