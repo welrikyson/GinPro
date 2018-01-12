@@ -32,12 +32,12 @@ public class LoginController implements Initializable {
 	@FXML
 	void logar(ActionEvent event) {
 		
-		UsuarioDAO dao = new UsuarioDAO();
 		String login = txtNome.getText();
 		String senha = psSenha.getText();
-		Usuario usuario =dao.pesquisaPorLogin(login);
 		
-		if(usuario.getLogin().equals(login)) {
+		Usuario usuario =new UsuarioDAO().pesquisaPorLogin(login);
+		
+		if(!usuario.equals(null)) {
 				if(usuario.getSenha().equals(senha)) {
 					lbErroLogin.setText("logado!");
 				}else {
