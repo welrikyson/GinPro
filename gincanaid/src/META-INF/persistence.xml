@@ -29,4 +29,29 @@
 
 		</properties>
 	</persistence-unit>
+	
+	<persistence-unit name="gincanaidHost">
+		<!-- provedor/implementacao do JPA -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<!-- entidade mapeada -->
+		<class>br.com.gincanaid.model.Usuario</class>
+
+		<properties>
+			<!-- dados da conexao -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql10.freemysqlhosting.net/sql10215812" />
+			<property name="javax.persistence.jdbc.user" value="sql10215812" />
+			<property name="javax.persistence.jdbc.password" value="WgsZwr5bcN" />
+
+			<!-- propriedades do hibernate -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- atualiza o banco, gera as tabelas se for preciso -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+		</properties>
+	</persistence-unit>
 </persistence>

@@ -10,7 +10,7 @@ public class Connection {
 		// TODO Auto-generated constructor stub
 		if (emf == null) {
 			System.out.println("criei a conexao");
-			emf = Persistence.createEntityManagerFactory("gincanaid");
+			emf = Persistence.createEntityManagerFactory("gincanaidHost");
 		} else
 			System.out.println("nao precisei de criar a conexao");
 	}
