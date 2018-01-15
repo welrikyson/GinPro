@@ -6,6 +6,7 @@ import br.com.gincanaid.connection.Connection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -23,6 +24,7 @@ public class Login extends Application {
 			cena = new Scene(page);
 
 			stage.initStyle(StageStyle.UNDECORATED);
+			stage.getIcons().addAll(new Image(Login.class.getResourceAsStream("../view/login/icone.png")));
 
 			stage.setScene(cena);
 			stage.show();
