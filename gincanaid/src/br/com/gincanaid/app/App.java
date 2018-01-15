@@ -5,8 +5,10 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class App extends Application {
 	public static Stage palco;
@@ -24,7 +26,8 @@ public class App extends Application {
 			palco = primaryStage;
 			page = FXMLLoader.load(App.class.getResource("../view/app/app.fxml"));
 			cena = new Scene(page);
-			
+			primaryStage.initStyle(StageStyle.UNDECORATED);
+			primaryStage.getIcons().addAll(new Image(Login.class.getResourceAsStream("../view/login/icone.png")));
 			primaryStage.setScene(cena);
 			primaryStage.show();
 		} catch (IOException e) {
