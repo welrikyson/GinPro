@@ -3,9 +3,11 @@ package br.com.gincanaid.view.login;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import br.com.gincanaid.app.App;
 import br.com.gincanaid.app.Login;
 import br.com.gincanaid.dao.UsuarioDAO;
 import br.com.gincanaid.model.Usuario;
+import br.com.gincanaid.util.Campo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
+import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
 
@@ -39,9 +42,13 @@ public class LoginController implements Initializable {
 		
 		if(!usuario.equals(null)) {
 				if(usuario.getSenha().equals(senha)) {
-					lbErroLogin.setText("logado!");
+					//Verificar qual usuario esta logado
+					new App().start(new Stage());
+					Login.palco.close();
+					System.out.println("Logado!");
 				}else {
 					lbErroLogin.setText("Senha incorreta, verifique os valores!");
+					Campo.erroLogin(psSenha);
 				}
 			
 		}else {

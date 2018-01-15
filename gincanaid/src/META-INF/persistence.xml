@@ -26,6 +26,8 @@
 
 		</properties>
 	</persistence-unit>
+	
+	<!-- Unidade de persistencia local -->
 <!-- 	<persistence-unit name="gincanaidLocal">
 		provedor/implementacao do JPA
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
