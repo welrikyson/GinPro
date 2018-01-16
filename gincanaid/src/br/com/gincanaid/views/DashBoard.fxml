@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="174.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.gincanaid.controller.DashBoardController">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.gincanaid.controller.DashBoardController">
    <children>
       <GridPane prefHeight="174.0" prefWidth="380.0">
         <columnConstraints>
@@ -23,18 +23,18 @@
          <children>
             <VBox prefHeight="87.0" prefWidth="185.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="198.0" text="Equipe2" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Label fx:id="lblEq1" prefHeight="17.0" prefWidth="198.0" text="Equipe2" />
+                  <Text fx:id="lblEq1Pontos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label prefHeight="17.0" prefWidth="198.0" text="Equipe2">
+                  <Label fx:id="lblEq2" prefHeight="17.0" prefWidth="198.0" text="Equipe2">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="lblEq2Pontos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </VBox>
          </children>

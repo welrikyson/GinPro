@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import br.com.gincanaid.app.App;
 import br.com.gincanaid.app.Login;
-import br.com.gincanaid.controller.DashBoardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +23,7 @@ public class AppController {
 
 	@FXML
 	void menuDashBoard(MouseEvent event) throws IOException {
-		
+		AnchorPane page = FXMLLoader.load(App.class.getResource("../views/DashBoard.fxml"));
+		boxConteudo.getChildren().add(page);
 	}
 }
