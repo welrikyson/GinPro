@@ -8,6 +8,7 @@ import br.com.gincanaid.app.Login;
 import br.com.gincanaid.dao.UsuarioDAO;
 import br.com.gincanaid.model.Usuario;
 import br.com.gincanaid.util.Campo;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -58,7 +59,7 @@ public class LoginController implements Initializable {
 
 	@FXML
 	void fechar(ActionEvent event) {
-		Login.palco.close();
+		Platform.exit();
 	}
 
 	@FXML
