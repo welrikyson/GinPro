@@ -4,8 +4,10 @@ import java.io.IOException;
 
 import br.com.gincanaid.app.App;
 import br.com.gincanaid.app.Login;
+import br.com.gincanaid.controller.DashBoardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
