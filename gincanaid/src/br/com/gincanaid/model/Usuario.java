@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the usuario database table.
+ * The persistent class for the Usuario database table.
  * 
  */
 @Entity
@@ -13,8 +13,6 @@ import javax.persistence.*;
 	@NamedQuery(name="Usuario.findAll", query="SELECT u FROM Usuario u"),
 	@NamedQuery(name="Usuario.login", query="SELECT u FROM Usuario u WHERE u.login=:login")
 })
-
-
 public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -26,14 +24,6 @@ public class Usuario implements Serializable {
 	private String senha;
 
 	public Usuario() {
-	}
-
-	public int getId() {
-		return this.id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getLogin() {

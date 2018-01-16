@@ -7,8 +7,8 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
 		<!-- entidade mapeada -->
-		<class>br.com.gincanaid.model.Usuario</class>
 		<class>br.com.gincanaid.model.Equipe</class>
+		<class>br.com.gincanaid.model.Usuario</class>
 
 		<properties>
 			<!-- dados da conexao -->
