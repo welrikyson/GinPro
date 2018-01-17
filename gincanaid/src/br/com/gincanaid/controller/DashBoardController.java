@@ -8,31 +8,24 @@ import br.com.gincanaid.dao.EquipeDAO;
 import br.com.gincanaid.model.Equipe;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 public class DashBoardController implements Initializable{
 
-	
     @FXML
-    private Label lblEq1;
+    private Text lblEqAzulPontos;
+
 
     @FXML
-    private Text lblEq1Pontos;
-
-    @FXML
-    private Label lblEq2;
-
-    @FXML
-    private Text lblEq2Pontos;
+    private Text lblEqVermelhaPontos;
     
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		EquipeDAO dao = new EquipeDAO();
 		
 		List<Equipe> equipes = dao.findAll();
-		 lblEq1.setText(equipes.get(1).getNome()); 
-		 lblEq2.setText(equipes.get(2).getNome());
+		lblEqAzulPontos.setText(String.valueOf(equipes.get(0).getPonto()));
+		lblEqVermelhaPontos.setText(String.valueOf(equipes.get(1).getPonto()));
 		 
 	}
 	

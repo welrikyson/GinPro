@@ -2,6 +2,7 @@ package br.com.gincanaid.app;
 
 import java.io.IOException;
 
+import br.com.gincanaid.connection.Connection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ public class App extends Application {
 	private static AnchorPane page;
 
 	public static void main(String[] args) {
+		new Connection();
 		launch(args);
 
 	}
