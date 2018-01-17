@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -45,5 +47,11 @@
             </VBox>
          </children>
       </GridPane>
+      <TableView fx:id="tblEquipes" editable="true" layoutX="309.0" layoutY="498.0" prefHeight="102.0" prefWidth="398.0" styleClass="menu-sair" visible="false">
+        <columns>
+          <TableColumn fx:id="tbColNome" prefWidth="201.0" text="nome" />
+          <TableColumn fx:id="tbColPonto" prefWidth="195.0" text="ponto" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
