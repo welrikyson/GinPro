@@ -47,7 +47,7 @@
             </VBox>
          </children>
       </GridPane>
-      <TableView fx:id="tblEquipes" editable="true" layoutX="309.0" layoutY="498.0" prefHeight="102.0" prefWidth="398.0" styleClass="menu-sair" visible="false">
+      <TableView fx:id="tblEquipes" editable="true" layoutX="309.0" layoutY="498.0" prefHeight="102.0" prefWidth="398.0" styleClass="menu-sair">
         <columns>
           <TableColumn fx:id="tbColNome" prefWidth="201.0" text="nome" />
           <TableColumn fx:id="tbColPonto" prefWidth="195.0" text="ponto" />
